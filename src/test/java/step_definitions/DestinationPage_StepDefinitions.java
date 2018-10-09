@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import page_objects.DestinationPage;
 import page_objects.MainPage;
 import selenium_helpers.SeleniumDriver;
-import sun.security.krb5.internal.crypto.Des;
 
 public class DestinationPage_StepDefinitions {
     WebDriver driver = SeleniumDriver.baseDriver;

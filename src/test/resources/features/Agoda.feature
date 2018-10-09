@@ -8,7 +8,7 @@ Feature: Automatron Team Agoda Test Automation Project Feature
     Then I will fill 'Sifre'
     Then I will click 'Giris Yapin' button
     Then I should see Agoda homepage
-
+"""
   Scenario: Paris Otel First Search
     Given I must be logged in Agoda website
     And I will fill first search-box with city
@@ -49,7 +49,8 @@ Feature: Automatron Team Agoda Test Automation Project Feature
     When I should see  Kayitli Kartlarim
     Then I will fill CVV
     Then I will click Ayirtin & Sonra Ödeyin
-
+"""
+"""
   Scenario: Flights to Paris
     When I w ill click Ucuslar
     And I will fill to where city area
@@ -60,7 +61,7 @@ Feature: Automatron Team Agoda Test Automation Project Feature
     And I will click Ara button
     Then I should see the products are listed
 
-  Scenario: Roma First Search
+  # Scenario: Roma First Search
     Given I must be logged in Agoda website
     And I will fill first search-box Roma'
     And I will fill start date
@@ -140,4 +141,4 @@ Feature: Automatron Team Agoda Test Automation Project Feature
     When I will click Ucuslar
     And I will click Ara button
     Then I should see warning message
-
+"""
