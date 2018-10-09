@@ -16,7 +16,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//*[@class='SignInPanel']")
     private WebElement signin_panel;
 
-    @FindBy(id = "signin-password-input")
+    @FindBy(id = "signin-email-input")
     private WebElement login_email_input_area;
 
     @FindBy(id = "signin-password-input")

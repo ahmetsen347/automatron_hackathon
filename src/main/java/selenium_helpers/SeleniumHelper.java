@@ -34,7 +34,7 @@ public class SeleniumHelper{
             this.driver = new EdgeDriver(edgeOptions);
         }
 
-        this.driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         this.driver.manage().window().maximize();
         this.driver.get(baseUrl);
     }

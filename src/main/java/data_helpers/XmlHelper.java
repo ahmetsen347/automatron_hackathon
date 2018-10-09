@@ -10,7 +10,7 @@ import java.io.File;
 
 public class XmlHelper {
     private final static Logger applicationLogger = Logger.getLogger("applicationLogger");
-    private final static String XML_FILE_PATH = "C:\\hackathon\\database\\testdata.xml";
+    private final static String XML_FILE_PATH = "C:\\hackathon\\database\\automatron_hackathon_data.txt";
 
     public static RootData getRootDataFromXml(){
         try {
