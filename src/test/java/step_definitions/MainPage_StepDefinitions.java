@@ -9,14 +9,17 @@ import data_helpers.XmlHelper;
 import data_objects.LoginData;
 import data_objects.RezervationData;
 import data_objects.RootData;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import page_objects.MainPage;
+import selenium_helpers.ScreenshotHelper;
 import selenium_helpers.SeleniumDriver;
 
 import java.util.List;
 
 public class MainPage_StepDefinitions {
+    private final static Logger executionLogger = Logger.getLogger("executionLogger");
     WebDriver driver = SeleniumDriver.baseDriver;
     MainPage mainPage = new MainPage(driver);
     RootData rootData = XmlHelper.getRootDataFromXml();
@@ -43,8 +46,10 @@ public class MainPage_StepDefinitions {
     // Login to Agoda with e-mail
     @Given("^I am on the Agoda homepage$")
     public void i_am_on_the_Agoda_homepage() throws Throwable {
+        executionLogger.info("Started Scenario Login to Agoda with e-mail");
         getRequiredData();
         Assert.assertEquals(true, mainPage.validateSignInButton());
+        ScreenshotHelper.takeScreenshot(driver,"I am on the Agoda homepage", true);
     }
 
     @When("^I will click 'Giris Yapin' link$")
@@ -55,6 +60,7 @@ public class MainPage_StepDefinitions {
     @Then("^I should see Login pop -up$")
     public void i_should_see_Login_pop_up() throws Throwable {
         Assert.assertEquals(true, mainPage.validateSignInPanel());
+        ScreenshotHelper.takeScreenshot(driver,"I should see Login pop -up", true);
     }
 
     @Then("^I will fill 'E-posta'$")
@@ -77,6 +83,8 @@ public class MainPage_StepDefinitions {
     @Then("^I should see Agoda homepage$")
     public void i_should_see_Agoda_homepage() throws Throwable {
         Assert.assertEquals(true, mainPage.validateLoginValidationClass());
+        ScreenshotHelper.takeScreenshot(driver,"I should see Agoda homepage", true);
+        executionLogger.info("Scenario Login to Agoda Finished");
     }
 
     //Paris Otel First Search
