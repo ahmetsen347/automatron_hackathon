@@ -15,7 +15,7 @@ public class RootData {
         return loginDataList;
     }
 
-    @XmlElement(name = "reservation_data")
+    @XmlElement(name = "rezervation_data")
     public List<RezervationData> getRezervationDataList() {
         return rezervationDataList;
     }

@@ -2,8 +2,12 @@ package page_objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import selenium_helpers.ScreenshotHelper;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.beans.PropertyChangeListener;
 
 public class MainPage extends BasePage {
     public MainPage(WebDriver driver) {
@@ -58,7 +62,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//*[@class='ChildAges']")
     private WebElement child_ages_popup_validation;
 
-    @FindBy(xpath = "//*[@id='SearchBoxContainer']/div[1]/div/div[5]/div/div/div/div[3]/span[4]")
+    @FindBy(xpath = "//[@data-selenium='occupancyChildren']//[ text()='+']")
     private WebElement child_count_up_button;
 
     @FindBy(xpath = "//*[@data-selenium='desktop-occ-children-value' and text()='1']")
@@ -171,6 +175,8 @@ public class MainPage extends BasePage {
     }
 
     public void clickChildAgeCountUpButton(){
+        //Actions act = new Actions(driver);
+        //act.moveToElement(child_count_up_button).click().build().perform();
         child_count_up_button.click();
     }
 
