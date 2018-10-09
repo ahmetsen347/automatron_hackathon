@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+    <suite name="Automatron Test Suite" parallel="classes" configfailurepolicy="continue" thread-count="3">
+        <parameter name="url" value="https://www.agoda.com/tr-tr/"/>
+
+    <test name="Tests on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Tests on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Tests on Microsoft Edge">
+        <parameter name="browser" value="microsoft_edge"/>
+        <classes>
+            <class name="TestRunner"/>
+        </classes>
+    </test>
+
+        </suite>
