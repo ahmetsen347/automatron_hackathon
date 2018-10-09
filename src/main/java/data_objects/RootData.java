@@ -8,13 +8,23 @@ import java.util.List;
 public class RootData {
 
     private List<LoginData> loginDataList;
+    private List<RezervationData> rezervationDataList;
 
     @XmlElement(name = "login_data")
     public List<LoginData> getLoginDataList() {
         return loginDataList;
     }
 
+    @XmlElement(name = "reservation_data")
+    public List<RezervationData> getRezervationDataList() {
+        return rezervationDataList;
+    }
+
     public void setLoginDataList(List<LoginData> loginDataList) {
         this.loginDataList = loginDataList;
+    }
+
+    public void setRezervationDataList(List<RezervationData> rezervationDataList) {
+        this.rezervationDataList = rezervationDataList;
     }
 }

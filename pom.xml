@@ -126,7 +126,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>automatron</projectName>
+                            <projectName>automatron_hackathon</projectName>
                             <outputDirectory>target/reports</outputDirectory>
                             <cucumberOutput>target/cucumber.json</cucumberOutput>
                             <parallelTesting>true</parallelTesting>
