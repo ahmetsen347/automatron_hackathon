@@ -137,7 +137,7 @@ Feature: Automatron Team Agoda Test Automation Project Feature
 
   Scenario: Flights Negative Case
 
-    Given I should see Agoda homepage
+    Given I should see Agoda homepages
     When I will click Ucuslar
     And I will click Ara button
     Then I should see warning message
